@@ -7,70 +7,22 @@
       "role": "admin"
     },
     {
-      "id": "2",
-      "name": "Mark Manager",
+      "name": "Mark Manager00",
       "email": "mark@team.com",
-      "role": "manager"
+      "role": "Project_Manager",
+      "id": "2"
     },
     {
-      "id": "3",
-      "name": "Dev Dave",
-      "email": "dave@team.com",
-      "role": "developer"
-    },
-    {
-      "id": "4",
-      "name": "Tina Tester",
-      "email": "tina@team.com",
-      "role": "tester"
-    },
-    {
-      "id": "5",
-      "name": "Victor Viewer",
-      "email": "victor@team.com",
-      "role": "viewer"
-    },
-    {
-      "id": "6",
-      "name": "muhammed shibil ch",
+      "name": "shibil muhammed",
       "email": "shibilmuhammed069@gmail.com",
-      "role": "tester"
-    },
-    {
-      "id": "7",
-      "name": "muhammed shamil",
-      "email": "shamil@gmail.com",
-      "role": "developer"
-    },
-    {
-      "id": "8",
-      "name": "muhammed roshan",
-      "email": "roshan@gmail.com",
-      "role": "admin"
-    },
-    {
-      "id": "9",
-      "name": "muhammed ishan",
-      "email": "ishan@gmail.com",
-      "role": "Project_manager"
-    },
-    {
-      "id": "10",
-      "name": "Aysha",
-      "email": "aysha@gmail.com",
-      "role": "tester"
-    },
-    {
-      "id": "11",
-      "name": "haseem",
-      "email": "haseem@gmail.com",
-      "role": "user"
+      "role": "Admin",
+      "id": "bb92"
     }
   ],
   "tasks": [
     {
       "id": "1",
-      "title": "Setup project",
+      "title": "setup the project",
       "description": "Initialize repo and configure linter",
       "status": "todo",
       "priority": "high",
@@ -103,15 +55,6 @@
       "priority": "medium",
       "assigneeId": 3,
       "dueDate": "2025-07-05"
-    },
-    {
-      "id": "5",
-      "title": "Task filtering",
-      "description": "Status and assignee-based filters",
-      "status": "done",
-      "priority": "low",
-      "assigneeId": 2,
-      "dueDate": "2025-06-15"
     }
   ],
   "comments": [

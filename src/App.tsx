@@ -6,6 +6,7 @@ import MainNav from './components/MainNav'
 import AdminDashboard from './Pages/admin/AdminDashboard'
 import AdminAllUser from './Pages/admin/AdminAllUser'
 import AdminAllProjects from './Pages/admin/AdminAllProjects'
+import { Toaster } from './components/ui/toaster'
 
 function App() {
   const location = useLocation();
@@ -19,6 +20,8 @@ function App() {
         <Route path="/admin/all-users" element={<AdminAllUser/>}/>
         <Route path="/admin/all-projects" element={<AdminAllProjects/>}/>
       </Routes>
+
+      <Toaster/>
     </>
   )
 }
