@@ -68,7 +68,7 @@ const AddProjectModal: React.FC<AddProjectModalProps> = ({isOpen, onClose, onPro
             <div className="space-y-4">
                 <Input value={title} onChange={(e)=>setTitle(e.target.value)} placeholder='Project Title'/>
                 <Textarea value={description} onChange={(e)=> setDescription(e.target.value)} placeholder='Project Description'/>
-                <Input value={dueDate} onChange={(e)=>setDueDate(e.target.value)} type='date'/>
+                <Input  value={dueDate} onChange={(e)=>setDueDate(e.target.value)} type='date'/>
                 <Select value={status} onValueChange={setStatus}>
                     <SelectTrigger className='bg-gray-800 text-white'>
                         <SelectValue placeholder="Select Status"/>

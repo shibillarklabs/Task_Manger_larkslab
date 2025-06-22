@@ -1,38 +1,81 @@
-import React from 'react';
-
+import { Button } from '@/components/ui/button'
+import { Input } from '@/components/ui/input'
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
+import { toast } from '@/hooks/use-toast'
+import { loginUserAPI } from '@/services/allAPI'
+import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 const Login = () => {
+    const [email, setEmail]= useState('')
+    const [role, setRole]= useState('');
+        const navigate = useNavigate();
+
+        const handleLogin = async ()=>{
+            try{
+                const user = await loginUserAPI(email, role);
+                localStorage.setItem('user',JSON.stringify(user));
+
+                toast({
+                    title: 'Login Successful',
+                    description: `Welcome back, ${user.name}!`,
+                    variant: 'default',
+
+                });
+                switch(user.role){
+                    case 'admin':
+                        navigate('/admin/all-users');
+                        break;
+                    case 'Project_Manager':
+                        navigate('/manager/dashboard');
+                        break;
+                    case 'Developer':
+                        navigate('/developer/dashboard');
+                        break;
+                    case 'Tester':
+                        navigate('/tester/dashboard');
+                        break;
+                    default:
+                        navigate('/user/dashboard');
+                }
+            }catch(error){
+                toast({
+                    title: "login failed",
+                    description: 'Invalid email or role',
+                    variant: 'destructive'
+                })
+            }
+        }
+
+
+    
   return (
-    <div className='min-h-screen flex justify-center items-center px-4 py-6 sm:px-6 lg:px-8'>
-        <div className="w-full max-w-sm sm:max-w-md">
-            <div className="text-center mb-6 sm:mb-8">
-                <h1 className="text-3xl sm:text-4xl font-bold text-white mb-3 sm:mb-4">Welcome Back!</h1>
-                <div className="text-sm sm:text-base text-gray-300">
-                    <span>New User? </span>
-                    <button className="text-purple-300 hover:text-purple-200 underline font-medium">
-                        Sign up
-                    </button>
-                </div>
-            </div>
+    <div className='min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8'>
+        <div className="w-full max-w-sm sm:max-w-md p-6 sm:p-8 rounded-lg border border-gray-700 shadow-lg backdrop-blur">
+            <h1 className="text-3xl sm:text-4xl font-bold text-white mb-6 text-center">Welcome Back!</h1>
             <div className="space-y-4 sm:space-y-6">
-                <div>
-                    <input type="email" placeholder='Enter Your Email' className='w-full px-3 py-3 sm:px-4 sm:py-4 bg-purple-800/50 border border-purple-700/50 rounded-lg text-white placeholder-gray-400 focus:ring-2 focus:ring-purple-500 focus:border-transparent backdrop-blur-sm text-sm sm:text-base' />
-                </div>
-                <div className='relative'>
-                    <input type="password" placeholder='Enter your password' className='w-full px-3 py-3 sm:px-4 sm:py-4 bg-purple-800/50 border border-purple-700/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent backdrop-blur-sm pr-10 sm:pr-12 text-sm sm:text-base ' />
-                </div>
-                <div className="flex items-center">
-                    <input type="checkbox" id='terms' className='w-4 h-4 text-purple-600 bg-purple-800/50 border-purple-700/50 rounded focus:ring-purple-500 focus:ring-2' />
-                    <label htmlFor="terms" className='ml-2 sm:ml-3 text-gray-300 text-xs sm:text-sm leading-tight'>
-                        I agree to the {' '}
-                        <button className='text-purple-300 hover:text-purple-200 underline'>Terms and Conditions</button>
-                    </label>
-                </div>
-                <button type='submit' className=' group w-full py-3 sm:py-4  bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-purple-900 text-sm sm:text-base'><span className='inline-block transform transition-transform duration-300 ease-in-out group-hover:scale-110 '>Log In</span></button>
+                <Input value={email} onChange={(e)=> setEmail(e.target.value)} type='email' placeholder='Enter Your Email' className='text-white placeholder-gray-400'/>
+                <Select onValueChange={(value)=>setRole(value)}>
+                    <SelectTrigger className='text-white bg-gray-900 border border-gray-700'>
+                        <SelectValue placeholder="Select Role"/>
+                    </SelectTrigger>
+                    <SelectContent className='z-50 bg-gray-900 text-white border border-gray-700 shadow-md'>
+                        <SelectItem value='admin'>Admin</SelectItem>
+                        <SelectItem value='Project_Manager'>Project Manager</SelectItem>
+                        <SelectItem value='Developer'>Developer</SelectItem>
+                        <SelectItem value='Tester'>Tester</SelectItem>
+                        <SelectItem value='User'>User</SelectItem>
+
+
+                    </SelectContent>
+                </Select>
+                <Button onClick={handleLogin} className='w-full bg-purple-600 hover:bg-purple-700 text-white'>
+                    Log In
+                </Button>
             </div>
         </div>
     </div>
-  );
-};
+  )
+}
 
-export default Login;
+export default Login

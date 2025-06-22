@@ -3,10 +3,10 @@ import axios from "axios";
 
 
 const commonAPI = async (
-    httpMethod : "get" | "post" | "put" | "delete",
+    httpMethod : "get" | "post" | "put" | "delete" | "patch",
     url:string,
     reqBody?:any
-): Promise<AxiosResponse | unknown> => {
+): Promise<AxiosResponse | unknown> => { 
     const reqConfig : AxiosRequestConfig = {
         method : httpMethod,
         url,

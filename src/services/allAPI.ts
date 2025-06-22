@@ -1,5 +1,29 @@
+import type { AxiosResponse } from "axios";
 import commonAPI from "./commonAPI";
 import SERVERURL from "./serverURL";
+
+type User={
+    id:string;
+    name:string;
+    email:string;
+    role:string;
+};
+
+// login user
+export const loginUserAPI = async(email: string, role: string)=>{
+    const response = await commonAPI("get",`${SERVERURL}/users`)as AxiosResponse<User[]>;
+    const users = response.data;
+
+    const matchedUser = users.find(
+        (user)=>
+            user.email.toLowerCase()=== email.toLowerCase()&&
+        user.role.toLowerCase()=== role.toLowerCase()
+    );
+    if(!matchedUser){
+        throw new Error('Invalid Email or Role');
+    }
+    return matchedUser;
+}
 
 
 // get users
@@ -33,4 +57,10 @@ export const updateTaskAPI =async (taskId: string, updatedData: any)=>{
 // deleteproject
 export const deleteTaskAPI = async(taskId: string)=>{
     return await commonAPI('delete',`${SERVERURL}/tasks/${taskId}`)
+}
+// assign task to develoepr
+export const assignTaskToDeveloperAPI = async (taskId: string, developerId: string)=>{
+    return await commonAPI("patch",`${SERVERURL}/tasks/${taskId}`,{
+        assigneeId: developerId,
+    })
 }

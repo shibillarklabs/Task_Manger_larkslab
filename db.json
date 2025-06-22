@@ -7,56 +7,43 @@
       "role": "admin"
     },
     {
-      "name": "Mark Manager00",
+      "name": "Mark Manager",
       "email": "mark@team.com",
       "role": "Project_Manager",
       "id": "2"
     },
     {
-      "name": "shibil muhammed",
+      "id": "5ab6",
+      "name": "shibil",
       "email": "shibilmuhammed069@gmail.com",
-      "role": "Admin",
-      "id": "bb92"
+      "role": "Developer"
+    },
+    {
+      "id": "f391",
+      "name": "haseem",
+      "email": "haseem@gmail.com",
+      "role": "Tester"
+    },
+    {
+      "id": "07fb",
+      "name": "shamil",
+      "email": "shamil@gmail.com",
+      "role": "User"
+    },
+    {
+      "id": "28d0",
+      "name": "aysha",
+      "email": "aysha@gmail.com",
+      "role": "admin"
+    },
+    {
+      "id": "b416",
+      "name": "roshan",
+      "email": "roshan@gmail.com",
+      "role": "Developer"
     }
   ],
-  "tasks": [
-    {
-      "id": "1",
-      "title": "setup the project",
-      "description": "Initialize repo and configure linter",
-      "status": "todo",
-      "priority": "high",
-      "assigneeId": 3,
-      "dueDate": "2025-06-30"
-    },
-    {
-      "id": "2",
-      "title": "Build Kanban UI",
-      "description": "Drag and drop using dnd-kit",
-      "status": "inprogress",
-      "priority": "medium",
-      "assigneeId": 3,
-      "dueDate": "2025-07-02"
-    },
-    {
-      "id": "3",
-      "title": "User login flow",
-      "description": "JWT based login and role-based UI",
-      "status": "todo",
-      "priority": "high",
-      "assigneeId": 2,
-      "dueDate": "2025-07-01"
-    },
-    {
-      "id": "4",
-      "title": "Socket.IO integration",
-      "description": "Live comments and task updates",
-      "status": "todo",
-      "priority": "medium",
-      "assigneeId": 3,
-      "dueDate": "2025-07-05"
-    }
-  ],
+  "tasks": [],
   "comments": [
     {
       "id": "1",

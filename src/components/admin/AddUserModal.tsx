@@ -59,7 +59,7 @@ const AddUserModal: React.FC<AddUserModalProps> = ({onClose,onUserAdded}) => {
                     <SelectValue placeholder="Select Role"/>
                 </SelectTrigger>
                 <SelectContent className='bg-gray-800 text-white'>
-                    <SelectItem value='Admin'>Admin</SelectItem>
+                    <SelectItem value='admin'>Admin</SelectItem>
                     <SelectItem value='User'>User</SelectItem>
                     <SelectItem value='Project_Manager'>Project Manager</SelectItem>
                     <SelectItem value='Developer'>Developer</SelectItem>
