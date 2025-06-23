@@ -1,6 +1,7 @@
-import ManagerTeam from '@/components/projectmanager/ManagerTeam'
 import ProjectNav from '@/components/projectmanager/ProjectNav'
-import React, { Suspense } from 'react'
+import React, { lazy, Suspense } from 'react'
+
+const ManagerTeam = lazy(()=> import("@/components/projectmanager/ManagerTeam"))
 
 const Team = () => {
   return (

@@ -41,9 +41,52 @@
       "name": "roshan",
       "email": "roshan@gmail.com",
       "role": "Developer"
+    },
+    {
+      "id": "8e31",
+      "name": "shaa",
+      "email": "shi@gmail.com",
+      "role": "admin"
     }
   ],
-  "tasks": [],
+  "tasks": [
+    {
+      "id": "cdd9",
+      "title": "iadiovifw",
+      "description": "scqdv",
+      "priority": "low",
+      "status": "inprogress",
+      "dueDate": "2025-06-18",
+      "assigneeId": "b416"
+    },
+    {
+      "id": "5999",
+      "title": "BChbda",
+      "description": "VADVD",
+      "priority": "high",
+      "status": "todo",
+      "dueDate": "2025-07-04",
+      "assigneeId": "5ab6"
+    },
+    {
+      "id": "8bb2",
+      "title": "nwksnknsnknsl",
+      "description": "SMxnsa.ncsa",
+      "priority": "high",
+      "status": "inprogress",
+      "dueDate": "2025-07-03",
+      "assigneeId": "b416"
+    },
+    {
+      "id": "17f5",
+      "title": "Larkslab internship",
+      "description": "For the new interns",
+      "priority": "high",
+      "status": "done",
+      "dueDate": "2025-06-22",
+      "assigneeId": 1
+    }
+  ],
   "comments": [
     {
       "id": "1",
