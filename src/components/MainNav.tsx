@@ -7,7 +7,7 @@ const MainNav = () => {
     const [user ,setUser]= useState<{name: string; role: string }| null>(null);
         const navigate = useNavigate();
     useEffect(()=>{
-        const stored = localStorage.getItem("user");
+        const stored = localStorage.getItem("currentUser");
         if(stored){
             try{
                 const parsed = JSON.parse(stored);

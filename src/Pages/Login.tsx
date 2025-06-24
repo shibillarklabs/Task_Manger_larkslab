@@ -14,7 +14,7 @@ const Login = () => {
         const handleLogin = async ()=>{
             try{
                 const user = await loginUserAPI(email, role);
-                localStorage.setItem('user',JSON.stringify(user));
+                localStorage.setItem('currentUser', JSON.stringify(user))
 
                 toast({
                     title: 'Login Successful',

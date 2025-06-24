@@ -47,6 +47,12 @@
       "name": "shaa",
       "email": "shi@gmail.com",
       "role": "admin"
+    },
+    {
+      "id": "d917",
+      "name": "shamil",
+      "email": "shamil@gmail.com",
+      "role": "Developer"
     }
   ],
   "tasks": [
@@ -57,64 +63,61 @@
       "priority": "low",
       "status": "inprogress",
       "dueDate": "2025-06-18",
-      "assigneeId": "b416"
+      "assigneeId": "d917"
     },
     {
       "id": "5999",
       "title": "BChbda",
       "description": "VADVD",
       "priority": "high",
-      "status": "todo",
+      "status": "inprogress",
       "dueDate": "2025-07-04",
-      "assigneeId": "5ab6"
+      "assigneeId": "d917"
     },
     {
       "id": "8bb2",
       "title": "nwksnknsnknsl",
       "description": "SMxnsa.ncsa",
       "priority": "high",
-      "status": "inprogress",
+      "status": "done",
       "dueDate": "2025-07-03",
       "assigneeId": "b416"
     },
     {
-      "id": "17f5",
-      "title": "Larkslab internship",
-      "description": "For the new interns",
+      "id": "bb49",
+      "title": "wfs",
+      "description": "wdf",
+      "priority": "medium",
+      "status": "todo",
+      "dueDate": "2025-06-19",
+      "assigneeId": "b416"
+    },
+    {
+      "id": "cee8",
+      "title": "jb",
+      "description": "nn",
+      "priority": "low",
+      "status": "inprogress",
+      "dueDate": "2025-07-11",
+      "assigneeId": "d917"
+    },
+    {
+      "id": "463a",
+      "title": "shibil",
+      "description": "znxjnscz",
       "priority": "high",
       "status": "done",
-      "dueDate": "2025-06-22",
-      "assigneeId": 1
+      "dueDate": "2025-07-04",
+      "assigneeId": "d917"
     }
   ],
   "comments": [
     {
-      "id": "1",
-      "taskId": 2,
-      "userId": 3,
-      "message": "Working on UI logic",
-      "timestamp": "2025-06-18T10:00:00Z"
-    },
-    {
-      "id": "2",
-      "taskId": 2,
-      "userId": 2,
-      "message": "Make sure it's accessible",
-      "timestamp": "2025-06-18T11:00:00Z"
-    },
-    {
-      "id": "3",
-      "taskId": 1,
-      "userId": 3,
-      "message": "Repo is set up",
-      "timestamp": "2025-06-17T08:00:00Z"
-    },
-    {
-      "id": "4",
-      "taskId": 5,
-      "userId": 2,
-      "message": "Tested and deployed",
-      "timestamp": "2025-06-16T09:00:00Z"
+      "id": "31e5",
+      "taskId": "463a",
+      "userId": "d917",
+      "message": "Hai good morninig",
+      "timestamp": "2025-06-24T11:52:45.848Z"
     }
   ]
 }

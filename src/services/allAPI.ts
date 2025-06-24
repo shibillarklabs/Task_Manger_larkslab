@@ -64,3 +64,28 @@ export const assignTaskToDeveloperAPI = async (taskId: string, developerId: stri
         assigneeId: developerId,
     })
 }
+
+// developer edit status
+export const updateTaskStatusAPI = async (taskId: string, status:string)=>{
+    return await commonAPI("patch", `${SERVERURL}/tasks/${taskId}`, { status })
+}
+
+// get all comments
+export const getAllCommentAPI = async ()=>{
+    return await commonAPI("get", `${SERVERURL}/comments`)
+}
+
+// post a new comment
+export const postCommentAPI = async (commentData: {taskId: string, userId: string, message: string, timestamp: string})=>{
+    return await commonAPI("post", `${SERVERURL}/comments`, commentData)
+}
+
+// deletecomment
+export const deleteCommentAPI = async (commentId : string)=>{
+    return await commonAPI("delete", `${SERVERURL}/comments/${commentId}`)
+}
+
+// editcomment
+export const updateCommentAPI = async (commentId: string, updatedData: {message: string; timestamp: string})=>{
+    return await commonAPI("patch",`${SERVERURL}/comments/${commentId}`,updatedData)
+}

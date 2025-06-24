@@ -1,6 +1,7 @@
-import Dashboard from '@/components/projectmanager/Dashboard'
 import ProjectNav from '@/components/projectmanager/ProjectNav'
-import React, { Suspense } from 'react'
+import React, { lazy, Suspense } from 'react'
+
+const Dashboard = lazy(()=>import("@/components/projectmanager/Dashboard"))
 
 const ProjectDashboard = () => {
   return (

@@ -1,8 +1,11 @@
+import DevDashboard from '@/components/developer/DevDashboard'
 import React from 'react'
 
 const DeveloperDashboard = () => {
   return (
-    <div>DeveloperDashboard</div>
+    <div>
+      <DevDashboard/>
+    </div>
   )
 }
 

@@ -64,7 +64,7 @@ const AllProjects = () => {
     
 
     const filteredTasks = tasks.filter((task: Task)=>{
-        const titleMatch = task.title.toLowerCase().includes(searchTitle.toLowerCase());
+        const titleMatch = (task.title || "").toLowerCase().includes(searchTitle.toLowerCase());
         const statusMatch = statusFilter === 'All' || task.status === statusFilter;
         const priorityMatch = priorityFilter === 'All' || task.priority ===priorityFilter;
         return titleMatch && statusMatch && priorityMatch;
@@ -72,6 +72,8 @@ const AllProjects = () => {
 
     if(isLoading)return <p className='text-white'>Loading Projects...</p>
     if(isError) return <p className='text-red-400'>Error fetching User</p>
+
+    
 
   return (
     <div className='space-y-6'>
