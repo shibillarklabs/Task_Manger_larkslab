@@ -1,11 +1,11 @@
-import DevDashboard from '@/components/developer/DevDashboard'
-import React from 'react'
+import React, { lazy, Suspense } from 'react'
+const DevDashboard = lazy(()=> import("@/components/developer/DevDashboard"))
 
 const DeveloperDashboard = () => {
   return (
-    <div>
+    <Suspense fallback={<p className='text-white'>Loading developer dashboard....</p>}>
       <DevDashboard/>
-    </div>
+    </Suspense>
   )
 }
 

@@ -1,8 +1,11 @@
-import React from 'react'
+import Tdashboard from '@/components/tester/Tdashboard'
+import React, { Suspense } from 'react'
 
 const TesterDashboard = () => {
   return (
-    <div>TesterDashboard</div>
+    <Suspense fallback={<p className='text-white'>Loading TesterDashboard..</p>}>
+      <Tdashboard/>
+    </Suspense>
   )
 }
 
